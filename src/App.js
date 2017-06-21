@@ -3,6 +3,7 @@ import { Switch, Route, NavLink } from 'react-router-dom'
 import './App.css';
 
 import Github from './Github'
+import WorldView from './WorldView'
 
 class App extends Component {
   render() {
@@ -16,11 +17,14 @@ class App extends Component {
           <ul className="nav-links">
             <li>
               <NavLink to='/github'>Github API</NavLink>
+              <span>   |   </span>
+              <NavLink to='/worldView'>World View</NavLink>
             </li>
           </ul>
         </div>
         <Switch>
           <Route path='/github' component={Github} />
+          <Route path='/worldView' component={WorldView} />
           <Route render={() => <p>To get started, click one of the links above</p>} />
         </Switch>
       </div>
